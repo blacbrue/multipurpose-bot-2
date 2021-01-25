@@ -1,0 +1,3 @@
+setInterval(() => {
+    client.user.setActivity(`funny stuff | Servers: ${client.guilds.cache.size}`, { type: "STREAMING", url: "https://www.youtube.com/watch?v=cfXmmMO8e_Q" })
+  }, 60000); // Runs this every 60 seconds.
