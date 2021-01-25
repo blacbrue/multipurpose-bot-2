@@ -13,7 +13,7 @@ mongoose.connect(process.env.MONGOTOKEN, {
     useNewUrlParser: true,
 }).then(console.log('Connected to MongoDB'))
 
-Levels.setURL(process.env.MONGOTOKENFORXP))
+Levels.setURL(process.env.MONGOTOKENFORXP).then(console.log('Connected to MongoDB using discord-xp'))
 
 const prefixSchema = require('./models/prefix')
 

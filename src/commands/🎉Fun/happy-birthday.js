@@ -13,13 +13,10 @@ module.exports = {
     run: async (client, message, args) => {
         const channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
         if (!channel) return message.channel.send('Please specify a channel')
-        const user = args.slice(1).content.split(" ");
+        const user = args.slice(1).join(" ");
 
-        user.shift();
-
-        user = user.join(" ");
         if (!user) return message.channel.send('Please specify a user to wish hapi bdayyy.')
 
-        client.channels.cache.get(`${channel}`).send(`Happy Birthday ${user}!`)
+        channel.send(`Happy Birthday ${user}!`)
     }
 }
